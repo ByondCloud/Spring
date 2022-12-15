@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    <bean id="userService" class="com.cloud.service.impl.UserServiceImpl">-->
+<!--        <property name="xxx" ref="userDao"/>-->
+<!--    </bean>-->
+
+    <bean id="userDao1" class="com.cloud.factory.MyBeanFactory1" factory-method="UserDao">
+        <constructor-arg name="account" value="cloud"/>
+    </bean>
+
+    <bean id="myBeanFactory2" class="com.cloud.factory.MyBeanFactory2" />
+    <bean id="userDao2" factory-bean="myBeanFactory2" factory-method="userDao">
+        <constructor-arg name="ojbk" value="abc"/>
+    </bean>
+
+    <bean id="userDao3" class="com.cloud.factory.MyBeanFactory3"/>
+
+</beans>
