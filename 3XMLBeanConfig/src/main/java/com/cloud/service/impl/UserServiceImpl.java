@@ -3,6 +3,11 @@ package com.cloud.service.impl;
 import com.cloud.dao.UserDao;
 import com.cloud.service.UserService;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
 /**
  * @author ByondCloud
  * @version 1.0
@@ -11,13 +16,50 @@ import com.cloud.service.UserService;
  */
 public class UserServiceImpl implements UserService {
 
-    private UserDao userDao;
+    private List<String> stringList;
 
-
-    // beanfactory去调用该方法，从容器中获得userDao设置到此处
-    public void setXxx(UserDao userDao) {
-        System.out.println("引用 " + userDao);
-        this.userDao = userDao;
+    public void setStringList(List<String> stringList) {
+        this.stringList = stringList;
     }
 
+
+    private List<UserDao> UserDaoList;
+
+    public void setUserDaoList(List<UserDao> userDaoList) {
+        UserDaoList = userDaoList;
+    }
+
+    private Set<String> strSet;
+
+    public void setStrSet(Set<String> strSet) {
+        this.strSet = strSet;
+    }
+
+    private Set<UserDao> userDaoSet;
+
+    public void setUserDaoSet(Set<UserDao> userDaoSet) {
+        this.userDaoSet = userDaoSet;
+    }
+
+
+    private Map<String, UserDao> map;
+
+    public void setMap(Map<String, UserDao> map) {
+        this.map = map;
+    }
+
+    private Properties properties;
+
+    public void setProperties(Properties properties) {
+        this.properties = properties;
+    }
+
+    public void show() {
+        System.out.println(stringList);
+        System.out.println(UserDaoList);
+        System.out.println(strSet);
+        System.out.println(userDaoSet);
+        System.out.println(map);
+        System.out.println(properties);
+    }
 }

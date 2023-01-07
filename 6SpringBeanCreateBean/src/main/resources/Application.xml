@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="service" class="com.cloud.service.impl.UserServiceImpl"/>
+    <bean id="dao" class="com.cloud.dao.impl.UserDaoImpl"/>
+    <bean class="com.cloud.processor.MyBeanFactoryPostProcessors"/>
+    <bean class="com.cloud.processor.MyBeanDefinitionRegistryPostProcessor"/>
+</beans>

@@ -2,17 +2,39 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="5.第三方Bean交给Spring管理" />
+        <module name="test" />
+        <module name="19Spring_WEB" />
+        <module name="16AOP_XML" />
+        <module name="10MyBatis-Spring" />
+        <module name="12.注解开发" />
+        <module name="21MVCInterceptor" />
+        <module name="7.自定义MyComponent注解" />
+        <module name="17AOP_Anno" />
         <module name="1.BeanFactory的入门" />
-        <module name="2.ApplicationContext的入门" />
+        <module name="6.SpringBean的实例化基本流程" />
+        <module name="11myselfNameSpace" />
         <module name="3.基于XML的Bean配置" />
+        <module name="9SpringLifeCycle" />
+        <module name="18Spring_Tran_Test" />
+        <module name="8BeanPostProcessor" />
+        <module name="15AOP" />
+        <module name="13AnnotationMyBatis" />
+        <module name="2.ApplicationContext的入门" />
+        <module name="14import" />
+        <module name="22AnnoSpringMVC" />
+        <module name="4.自动装配" />
+        <module name="20SpringMVC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="1.BeanFactory的快速入门" target="8" />
+      <module name="18Spring_Trans_Test" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

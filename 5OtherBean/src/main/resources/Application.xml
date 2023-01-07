@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="druid" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/test"/>
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+    </bean>
+
+    <bean id="calzz" class="java.lang.Class" factory-method="forName">
+        <constructor-arg name="className" value="com.mysql.cj.jdbc.Driver"/>
+    </bean>
+    <bean id="connection" class="java.sql.DriverManager" factory-method="getConnection" scope="prototype">
+        <constructor-arg name="user" value="root"/>
+        <constructor-arg name="password" value="123456"/>
+        <constructor-arg name="url" value="jdbc:mysql://localhost:3306/test"/>
+    </bean>
+
+    <bean id="simpleDateFormat" class="java.text.SimpleDateFormat">
+        <constructor-arg name="pattern" value="yyyy-MM-dd HH:mm:ss"/>
+    </bean>
+    <bean id="date" factory-bean="simpleDateFormat" factory-method="parse">
+        <constructor-arg name="source" value="2022-10-01 12:12:15"/>
+    </bean>
+
+    <bean id="resourceAsStream" class="org.apache.ibatis.io.Resources" factory-method="getResourceAsStream">
+        <constructor-arg name="resource" value="MyBatis-config.xml"/>
+    </bean>
+    <bean id="builder" class="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
+    <bean id="sqlSessionFactory" class="org.apache.ibatis.session.SqlSessionFactory" factory-bean="builder" factory-method="build">
+        <constructor-arg name="inputStream" ref="resourceAsStream"/>
+    </bean>
+
+</beans>

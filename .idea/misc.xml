@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/1.BeanFactory的快速入门/pom.xml" />
+        <option value="$PROJECT_DIR$/18Spring_Trans_Test/pom.xml" />
       </set>
     </option>
   </component>

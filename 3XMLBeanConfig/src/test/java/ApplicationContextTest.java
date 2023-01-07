@@ -1,5 +1,6 @@
 import com.cloud.dao.UserDao;
 import com.cloud.dao.impl.UserDaoImpl;
+import com.cloud.service.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -12,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class ApplicationContextTest {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("Application.xml");
-        Object userDao = applicationContext.getBean("userDao3");
-        System.out.println(userDao);
+        UserService userService = (UserService) applicationContext.getBean("userService");
+        userService.show();
     }
 }

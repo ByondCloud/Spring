@@ -12,6 +12,26 @@
         <module>1BeanFactory</module>
         <module>2ApplicationContext</module>
         <module>3XMLBeanConfig</module>
+        <module>4AutomaticAssembly</module>
+        <module>5OtherBean</module>
+        <module>6SpringBeanCreateBean</module>
+        <module>7BeanFactoryPostProcessor</module>
+        <module>8BeanPostProcessor</module>
+        <module>9SpringLifeCycle</module>
+        <module>10MyBatis-Spring</module>
+        <module>11myselfNameSpace</module>
+        <module>12annotation</module>
+        <module>test</module>
+        <module>13AnnotationMyBatis</module>
+        <module>14import</module>
+        <module>15AOP</module>
+        <module>16AOP_XML</module>
+        <module>17AOP_Anno</module>
+        <module>18Spring_Tran_Test</module>
+        <module>19Spring_WEB</module>
+        <module>20SpringMVC</module>
+        <module>21MVCInterceptor</module>
+        <module>22AnnoSpringMVC</module>
     </modules>
 
     <properties>

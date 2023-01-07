@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:haohao="http://www.cloud.com/haohao"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.cloud.com/haohao
+       http://www.cloud.com/haohao/haohao-annotation.xsd">
+
+    <bean id="dao" class="com.cloud.dao.impl.UserDaoImpl"/>
+    <haohao:annotation-driven></haohao:annotation-driven>
+
+</beans>

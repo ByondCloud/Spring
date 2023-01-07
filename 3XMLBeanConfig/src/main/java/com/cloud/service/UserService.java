@@ -7,4 +7,6 @@ package com.cloud.service;
  * @Time 16:46
  */
 public interface UserService {
+
+    public void show();
 }

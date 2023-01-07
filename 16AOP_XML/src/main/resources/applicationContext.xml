@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="userService" class="com.cloud.service.impl.UserServiceImpl"/>
+    <bean id="userDao" class="com.cloud.dao.impl.UserDaoImpl"/>
+    <bean id="myAdvice" class="com.cloud.advice.MyAdvice"/>
+    <bean id="myAdvice2" class="com.cloud.test.MyAdvice2"/>
+
+    <aop:config>
+<!--        配置切点表达式，目的指定哪些方法被增强-->
+        <aop:pointcut id="myPointCut" expression="execution(void com.cloud.service.impl.UserServiceImpl.show1())"/>
+        <aop:pointcut id="myPointCut2" expression="execution(void com.cloud.service.impl.UserServiceImpl.show2())"/>
+<!--        配置织入，目的是指定哪些切点与哪些通知进行结合-->
+<!--        <aop:aspect ref="myAdvice">-->
+<!--            <aop:before method="beforeAdvice" pointcut-ref="myPointCut"/>-->
+<!--            <aop:before method="beforeAdvice" pointcut="execution(void com.cloud.service.impl.UserServiceImpl.show2())"/>-->
+<!--            <aop:around method="around" pointcut-ref="myPointCut2"/>-->
+<!--        </aop:aspect>-->
+
+        <aop:advisor advice-ref="myAdvice2" pointcut-ref="myPointCut"/>
+
+    </aop:config>
+
+
+</beans>

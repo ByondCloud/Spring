@@ -1,0 +1,2 @@
+# spring.handlers
+http\://www.cloud.com/haohao=com.cloud.handlers.HaohaoNameSpaceHandler
